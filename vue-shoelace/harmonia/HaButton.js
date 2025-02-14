@@ -4,7 +4,7 @@ class HaButton extends SlButton {
     constructor() {
         super();
 
-        this.onClickCallbackName = this.getAttribute('ha-on-click');
+        this.onClickCallbackName = this.getAttribute('ha-click');
 
         this.addEventListener('click', this.handleOnClick.bind(this));
     }

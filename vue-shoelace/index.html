@@ -33,21 +33,21 @@
 
 <body id="app">
 
-    <ha-button size="small" ha-on-click="alertOnButtonClick">Click me</ha-button>
-    <ha-input ha-on-change="alertOnInputChange" ha-value="inputValue"></ha-input>
-    <ha-select label="Select a Few" multiple clearable ha-value="selectValue">
+    <ha-button size="small" ha-click="alertOnButtonClick">Click me</ha-button>
+    <ha-input ha-change="alertOnInputChange" ha-model="inputValue"></ha-input>
+    <ha-select label="Select a Few" multiple clearable ha-model="selectValue">
         <sl-option v-for="item in items" :value="item.value">{{item.name}}</sl-option>
     </ha-select>
 
-    <ha-alert variant="primary" duration="5000" countdown="rtl" closable ha-value="myAlert">
+    <ha-alert variant="primary" duration="5000" countdown="rtl" closable ha-element="myAlert">
         <sl-icon slot="icon" name="info-circle"></sl-icon>
         You're not stuck, the alert will close after a pretty long duration.
     </ha-alert>
-    <ha-button variant="primary" closable ha-on-click="showAlert">Show Alert</ha-button>
-    <ha-button variant="primary" closable ha-on-click="showToast">Show Toast</ha-button>
-    <ha-button variant="primary" closable ha-on-click="showToastStack">Show Toast Stack</ha-button>
+    <ha-button variant="primary" closable ha-click="showAlert">Show Alert</ha-button>
+    <ha-button variant="primary" closable ha-click="showToast">Show Toast</ha-button>
+    <ha-button variant="primary" closable ha-click="showToastStack">Show Toast Stack</ha-button>
 
-    <ha-alert ha-value="myToast" closable duration="3000">
+    <ha-alert ha-element="myToast" closable duration="3000">
         <sl-icon slot="icon" name="info-circle"></sl-icon>
         This is a toast #{{toastCounter}}
     </ha-alert>

@@ -5,8 +5,8 @@ class HaSelect extends SlSelect {
     constructor() {
         super();
 
-        this.modelPropertyName = this.getAttribute('ha-value');
-        this.onChangeCallbackName = this.getAttribute('ha-on-change');
+        this.modelPropertyName = this.getAttribute('ha-model');
+        this.onChangeCallbackName = this.getAttribute('ha-change');
 
         this.addEventListener('sl-change', this.handleOnChange.bind(this));
 

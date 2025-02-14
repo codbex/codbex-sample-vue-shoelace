@@ -4,7 +4,7 @@ class HaAlert extends SlAlert {
     constructor() {
         super();
 
-        this.modelPropertyName = this.getAttribute('ha-value');
+        this.modelPropertyName = this.getAttribute('ha-element');
 
         if (this.modelPropertyName) {
             $model[this.modelPropertyName] = this;
